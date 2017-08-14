@@ -33,9 +33,7 @@ if (is_leap === true){
 }
 
 // These console.log out the information to the terminal.
-console.log(`It is ${chalk.blue(now)}.`);
-console.log(`It is ${chalk.magenta(day_of_year)} day of the year.`);
-console.log(`It is ${chalk.cyanBright(diffMinutes)} seconds into the day.`);
-console.log(`It ${chalk.green(dst)} during Daylight Savings time.`);
+console.log(`It is ${chalk.blue(now)}.`+('\n')+`It is ${chalk.magenta(day_of_year)} day of the year.`);
+console.log(`It is ${chalk.cyanBright(diffMinutes)} seconds into the day.`+'\n'+`It ${chalk.green(dst)} during Daylight Savings time.`);
 console.log(`It ${chalk.red(leap_year)} a leap year.`);
 console.log(chalk.red('DONE!'));
