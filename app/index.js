@@ -22,12 +22,19 @@ var diffMinutes = mmt.diff(mmtMidnight, 'seconds');
 
 
 
-// moment([2011, 2, 12]).isDST();
+// console.log("Is DST? " + moment(mmt).isDST());
+let tof = moment(mmt).isDST();
+let dst = 'is';
+if (tof !== true){
+  dst = 'is not';
+}
+
+
 
 console.log(`It is ${chalk.blue(now)}.`);
 console.log(`It is ${chalk.magenta(day_of_year)} day of the year.`);
 console.log(`It is ${chalk.cyanBright(diffMinutes)} seconds into the day.`);
-console.log(`It is ${chalk.green(day_of_year)} during the daylight savings time.`);
+console.log(`It is ${chalk.green(dst)} during the daylight savings time.`);
 console.log(`It is ${chalk.red(day_of_year)} a leap year.`);
 
 
