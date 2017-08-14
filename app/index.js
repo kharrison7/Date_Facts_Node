@@ -10,10 +10,25 @@ console.log(moment());
 
 let now = moment().format('LLLL');
 let day_of_year = moment().format('DDDo');
+// let day_of_year = moment().format('DDDo');
+
+// These 3 give the number of sceonds in the day.
+// moment
+var mmt = moment();
+// Your moment at midnight
+var mmtMidnight = mmt.clone().startOf('day');
+// Difference in minutes
+var diffMinutes = mmt.diff(mmtMidnight, 'seconds');
+
+
+
+// moment([2011, 2, 12]).isDST();
 
 console.log(`It is ${chalk.blue(now)}.`);
 console.log(`It is ${chalk.magenta(day_of_year)} day of the year.`);
-
+console.log(`It is ${chalk.cyanBright(diffMinutes)} seconds into the day.`);
+console.log(`It is ${chalk.green(day_of_year)} during the daylight savings time.`);
+console.log(`It is ${chalk.red(day_of_year)} a leap year.`);
 
 
 
