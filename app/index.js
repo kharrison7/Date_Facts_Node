@@ -12,11 +12,12 @@ let now = moment().format('LLLL');
 let day_of_year = moment().format('DDDo');
 
 // These 3 give the number of sceonds in the day.
-var mmt = moment();
+let mmt = moment();
 // today at midnight
-var mmtMidnight = mmt.clone().startOf('day');
+// let mmtMidnight = mmt.clone().startOf('day');
 // Difference in seconds
-var diffMinutes = mmt.diff(mmtMidnight, 'seconds');
+// let diffMinutes = mmt.diff(mmtMidnight, 'seconds');
+let diffMinutes = mmt.diff(moment().hour(0).minute(0).second(0), 'seconds');
 
 // This checks to see if it is dst (Daylight Savings Time).
 let tof = moment(mmt).isDST();
